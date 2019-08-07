@@ -1,0 +1,115 @@
+{
+  "name": "swissbounderies-national-data",
+  "title": "Extract of national bounderies from swissBOUNDARIES3D",
+  "keywords": ["europe","switzerland","national","geodata","boundaries"],
+  "format": "csv",
+  "datapackage_version": "1.0.0",
+  "last_modified": "2019-08-07",
+  "version":"1.0.0",
+  "license": "ODC-By-1.0",
+  "licenses": [
+    {
+      "type": "ODC-By-1.0",
+      "url": "https://opendatacommons.org/licenses/by/1.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "swissBOUNDERIES3D municipal boundaries",
+      "url": "https://opendata.swiss/en/dataset/swissboundaries3d-gemeindegrenzen"
+    }
+  ],
+  "resources": [
+    {
+      "path": "data/preview.csv",
+      "title": "swissBOUNDARIES3D National Extract Preview CSV",
+      "description": "A preview of the tabular version of the data. Derived from csv-Version. Used for validation.",
+      "mediatype":"text/csv",
+      "encoding":"utf-8",
+      "name": "preview",
+      "schema": {
+        "fields":
+        [
+          {"name":"UUID","type":"string","format":"uuid","required":true},
+          {"name":"DATUM_AEND","type":"date","format":"default","format":"%Y/%m/%d"},
+          {"name":"DATUM_ERST","type":"date","format":"default","format":"%Y/%m/%d"},
+          {"name":"ERSTELL_J","type":"year","format":"default"},
+          {"name":"ERSTELL_M","type":"integer","format":"default","minimum":1,"maximum":12},
+          {"name":"REVISION_J","type":"year","format":"default"},
+          {"name":"REVISION_M","type":"integer","format":"default","minimum":1,"maximum":12},
+          {"name":"GRUND_AEND","type":"string","format":"default"},
+          {"name":"HERKUNFT","type":"string","format":"default","enum":["AV","swisstopo"]},
+          {"name":"HERKUNFT_J","type":"year","format":"default"},
+          {"name":"HERKUNFT_M","type":"integer","format":"default","minimum":1,"maximum":12},
+          {"name":"OBJEKTART","type":"string","format":"default","required":true,"enum":["Land"]},
+          {"name":"REVISION_Q","type":"string","format":"default"},
+          {"name":"ICC","type":"string","format":"default","enum":["CH","LI"]},
+          {"name":"SEE_FLAECH","type":"number","format":"default"},
+          {"name":"NAME","type":"string","format":"default"},
+          {"name":"EINWOHNERZ","type":"integer","format":"default","minimum":0},
+          {"name":"LANDESFLAE","type":"number","format":"default","minimum":0},
+          {"name":"LAND_TEIL","type":"string","format":"default"}
+        ]
+      }
+    },{
+      "path": "data/swissbounderies-national.csv",
+      "title": "swissBOUNDARIES3D National Extract CSV",
+      "description": "A tabular version of the data. Derived from geopackage-Version. Used for validation.",
+      "mediatype":"text/csv",
+      "encoding":"utf-8",
+      "name": "csv",
+      "schema": {
+        "fields":
+        [
+          {"name":"UUID","type":"string","format":"uuid","required":true},
+          {"name":"DATUM_AEND","type":"date","format":"default","format":"%Y/%m/%d"},
+          {"name":"DATUM_ERST","type":"date","format":"default","format":"%Y/%m/%d"},
+          {"name":"ERSTELL_J","type":"year","format":"default"},
+          {"name":"ERSTELL_M","type":"integer","format":"default","minimum":1,"maximum":12},
+          {"name":"REVISION_J","type":"year","format":"default"},
+          {"name":"REVISION_M","type":"integer","format":"default","minimum":1,"maximum":12},
+          {"name":"GRUND_AEND","type":"string","format":"default"},
+          {"name":"HERKUNFT","type":"string","format":"default","enum":["AV","swisstopo"]},
+          {"name":"HERKUNFT_J","type":"year","format":"default"},
+          {"name":"HERKUNFT_M","type":"integer","format":"default","minimum":1,"maximum":12},
+          {"name":"OBJEKTART","type":"string","format":"default","required":true,"enum":["Land"]},
+          {"name":"REVISION_Q","type":"string","format":"default"},
+          {"name":"ICC","type":"string","format":"default","enum":["CH","LI"]},
+          {"name":"SEE_FLAECH","type":"number","format":"default"},
+          {"name":"NAME","type":"string","format":"default"},
+          {"name":"EINWOHNERZ","type":"integer","format":"default","minimum":0},
+          {"name":"LANDESFLAE","type":"number","format":"default","minimum":0},
+          {"name":"LAND_TEIL","type":"string","format":"default"}
+        ]
+      }
+    },{
+      "path": "data/swissbounderies-national.gpkg",
+      "title": "swissBOUNDARIES3D National Extract GeoPackage",
+      "description": "A GeoPackage-Version of the data. WGS84.",
+      "mediatype":"application/vnd.opengeospatial.geopackage+sqlite3",
+      "name": "geopackage"
+    },{
+      "path": "data/swissbounderies-national-lv95.gpkg",
+      "title": "swissBOUNDARIES3D National Extract GeoPackage LV95",
+      "description": "A GeoPackage-Version of the data. LV95.",
+      "mediatype":"application/vnd.opengeospatial.geopackage+sqlite3",
+      "name": "geopackage-lv95"
+    },{
+      "path": "data/swissbounderies-national.geojson",
+      "title": "swissBOUNDARIES3D National Extract GeoJSON",
+      "description": "A GeoJSON-Version of the data. WGS84.",
+      "mediatype":"application/vnd.geo+json",
+      "name": "geojson"
+    }
+  ],
+  "contributors":[{
+    "title": "cividi.ch",
+    "email": "info@cividi.ch",
+    "web": "http://cividi.ch",
+    "role": "publisher"
+  }],
+  "maintainers":[{
+    "name": "Thorben Westerhuys",
+    "web": "https://github.com/n0rdlicht/"
+  }]
+}
