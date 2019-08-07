@@ -1,5 +1,5 @@
 
-[![goodtables.io](https://goodtables.io/badge/github/n0rdlicht/swissbounderies-municipalities-data.svg)](https://goodtables.io/github/n0rdlicht/swissbounderies-municipalities-data)
+[![goodtables.io](https://goodtables.io/badge/github/n0rdlicht/swissbounderies-municipalities-data.svg)](https://goodtables.io/github/n0rdlicht/swissboundaries-national-data)
 
 # Extract of national boundaries from swissBOUNDARIES3D
 
@@ -17,7 +17,7 @@ Run `make` in the root folder to fetch and convert the data. You need to have **
 
 If you also want to run the validation step with `make all-check` you need to have **goodtables** installed.
 
-[![](https://assets.okfn.org/p/data/img/logo.png) Preview Data Package](https://data.okfn.org/tools/view?url=https%3A%2F%2Fraw.githubusercontent.com%2Fcividi%2Fswissbounderies-municipalities-data%2Fmaster%2Fdatapackage.json)
+[![](https://assets.okfn.org/p/data/img/logo.png) Preview Data Package](https://data.okfn.org/tools/view?url=https%3A%2F%2Fraw.githubusercontent.com%2Fcividi%2Fswissboundaries-national-data%2Fmaster%2Fdatapackage.json)
 
 ## Validation
 
